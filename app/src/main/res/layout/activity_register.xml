@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/edt_name_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="Enter full name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edt_email_reg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_email_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/edt_pass_reg"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_reg"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_reg" />
+
+    <EditText
+        android:id="@+id/edt_pass_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btn_account"
+        app:layout_constraintStart_toStartOf="@+id/edt_email_reg"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email_reg" />
+
+    <Button
+        android:id="@+id/btn_account"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="315dp"
+        android:text="create account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edt_pass_reg"
+        app:layout_constraintStart_toStartOf="@+id/edt_pass_reg"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pass_reg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
