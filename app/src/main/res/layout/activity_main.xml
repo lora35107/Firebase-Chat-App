@@ -6,75 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_viewcars"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="129dp"
-        android:text="view uploaded cars"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="0dp"
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="188dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="31dp"
-        android:text="upload car data"
-        app:layout_constraintBottom_toTopOf="@+id/btn_viewcars"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_carmake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_carphoto" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/googleg_standard_color_18" />
 
     <EditText
-        android:id="@+id/edt_carname"
+        android:id="@+id/edt_carmake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="102dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
-        android:hint="Enter car name"
+        android:hint="Enter car make"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edt_carmodel"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/edt_carmodel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="62dp"
+        android:layout_marginBottom="35dp"
         android:ems="10"
-        android:hint="Enter Car Model"
+        android:hint="Enter car model"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edt_carprice"
-        app:layout_constraintStart_toStartOf="@+id/edt_carprice"
-        app:layout_constraintTop_toBottomOf="@+id/edt_carname" />
+        app:layout_constraintStart_toStartOf="@+id/edt_carmake"
+        app:layout_constraintTop_toBottomOf="@+id/edt_carmake" />
 
     <EditText
         android:id="@+id/edt_carprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Enter car price"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btn_carphoto"
-        app:layout_constraintStart_toStartOf="@+id/btn_carphoto"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/edt_carmodel"
         app:layout_constraintTop_toBottomOf="@+id/edt_carmodel" />
 
-    <Button
-        android:id="@+id/btn_carphoto"
+    <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
-        android:text="upload car photo"
-        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_carprice" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_carprice">
+
+        <Button
+            android:id="@+id/BtnChooseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="choose image" />
+
+        <Button
+            android:id="@+id/BtnUploadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="upload image" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="upload car data" />
+
+        <Button
+            android:id="@+id/btn_viewcars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="view uploaded data" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
